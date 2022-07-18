@@ -16,6 +16,10 @@
         placeholder="Password"
         required >
 
+      <div class="mb-2">
+        <router-link to="forgot">Forgot password?</router-link>
+      </div>
+
       <button
         class="w-100 btn btn-lg btn-primary"
         type="submit"

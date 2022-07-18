@@ -8,7 +8,7 @@
 import { ref } from 'vue'
 import { onMounted } from '@vue/runtime-core'
 import axios from 'axios'
-import {useStore} from 'vuex'
+import { useStore } from 'vuex'
 export default {
   name: "Home-item",
   setup() {
@@ -31,6 +31,7 @@ export default {
     })
 
     return {
+      store,
       message
     }
   }

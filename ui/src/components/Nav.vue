@@ -1,4 +1,3 @@
-
 <template>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <ui class="navbar-nav mr-auto">
@@ -33,6 +32,7 @@ import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
 import axios from 'axios'
 
+
 export default {
   name: "Nav-items",
   setup() {
@@ -41,10 +41,11 @@ export default {
     const auth = computed(() => store.state.auth)
     const logout = async () => {
       await axios.post('logout', {})
-      store.dispatch('setAuth', false)
+      store.dispatch('setaAuth', false)
       await router.push('/login')
     }
     return {
+      logout,
       auth
     }
   }
